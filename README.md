@@ -190,3 +190,31 @@ Now different functions in mftsccs can be used by importing them in entry point 
 
 init("https://devboom.freeschema.com", "https://devai.freeschema.com");`
 
+#### command used to run the Webpack bundler for your project:npx webpack
+
+The npx webpack command is used to run the Webpack bundler for your project. It is a way to execute the locally installed Webpack binary without the need to install it globally.
+
+Here's a breakdown of what happens when you run npx webpack:
+
+##### npx:
+
+npx is a tool that comes with npm (Node Package Manager). It allows you to run binaries from locally installed npm packages.
+
+##### webpack:
+
+This is the command you want to run. It invokes the Webpack bundler.
+When you run npx webpack in the terminal, it looks for the webpack binary in the node_modules directory of your project (where Webpack was installed locally) and executes it.
+
+Assuming you have a webpack.config.js file in your project, Webpack will use the configuration specified in that file to bundle your project's assets.
+
+`npx webpack`
+
+If you don't have a webpack.config.js file, Webpack will use default settings and attempt to bundle the src/index.js file into a dist/main.js file by default (assuming these are the default entry and output configurations).
+
+Keep in mind that using npx is recommended for running binaries from locally installed packages, as it avoids potential version conflicts between globally installed and locally installed packages.
+
+Before running npx webpack, make sure you have Webpack and its dependencies installed. If they are not installed yet, you can install them using:
+
+`npm install mftsccs`
+
+After the installation, you should be able to use npx webpack to bundle your project.
