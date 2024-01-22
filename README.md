@@ -1,7 +1,7 @@
 # Documentation-mftsccs
 <h1>How To install mftsccs package for new project</h1>
 
-# mftsccs(package)
+# How to install mftsccs(package)
 
 mftsccs stands for "mentor friends the symentic concept connection system"
 
@@ -218,3 +218,66 @@ Before running npx webpack, make sure you have Webpack and its dependencies inst
 `npm install mftsccs`
 
 After the installation, you should be able to use npx webpack to bundle your project.
+
+
+
+# MakeTheInstanceConcept
+
+------
+
+(mftsccs>=3.0.6)
+
+MakeTheInstanceConcept--Makes the new concept in devboom.freeschema.com database
+
+
+
+#### Description
+
+------
+
+`MakeTheInstanceConcept(type:string, referent:string, composition:boolean=false, userId: number,
+  accessId:number, sessionInformationId: number=999)`
+
+**MakeTheInstanceConcept()** returns  The Concept  with unique **ID**
+
+  
+
+#### Parameters
+
+------
+
+**type**
+
+​        Type of the concept(eg:-The-big-cat)
+
+**referent**
+
+​        value of the concept type(eg:-the-lion,the-tiger etc)
+
+**composition**
+
+​        Is concept's type a composition(eg:- the big cat is a composition so pass **`true`** as an argument for composition or pass **`false`** if the concept is  not a composition) 
+
+**userId**
+
+​        User Id of the concept
+
+**accessId**
+
+​        Access Id of the user
+
+**sessionInformationId**
+
+​        Session Information Id of the user
+
+#### Example
+
+------
+
+    1. `MakeTheInstanceConcept("The-big-cat", "", true, 999, 4, 999);`
+
+​        Above example return the new concept with unique Id which would be a composition of type The-big-cat.
+
+​    2. `MakeTheInstanceConcept("The-big-cat", "the-lion", true, 999, 4, 999);`
+
+​         Above example return the new concept with unique Id which would be a referent with value The-lion.
