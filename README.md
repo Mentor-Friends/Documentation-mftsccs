@@ -281,3 +281,92 @@ MakeTheInstanceConcept--Makes the new concept in devboom.freeschema.com database
 ​    2. `MakeTheInstanceConcept("The-big-cat", "the-lion", true, 999, 4, 999);`
 
 ​         Above example return the new concept with unique Id which would be a referent with value The-lion.
+
+# createTheConnection
+
+------
+
+(mftsccs>=3.0.6)
+
+createTheConnection--Creates the connection from concept's type  (composition/of the concept) to concept's referent (to the concept)
+
+#### Description
+
+ `createTheConnection(ofTheConceptId:number, ofTheConceptUserId:number, toTheConceptId:number, toTheConceptUserId:number,
+   typeId: number, sessionInformationId: number, sessionInformationUserId: number
+  )`
+
+
+
+**createTheConnection()**  Creates the connection from ofTheConcept(concept's type) to toTheConcept(concept's referent)
+
+#### Parameters
+
+------
+
+**ofTheConceptId**
+
+Id of the concept's type/composition(eg:-The-big-cat)
+
+**ofTheConceptUserId**
+
+user Id of concept's type/composition
+
+**toTheConceptId**
+
+Id of the concept's referent(eg:-the-lion)
+
+**toTheConceptUserId**
+
+user Id of concept's referent
+
+**typeId**
+
+Id of the concept's type
+
+ **sessionInformationId**
+
+Session Information Id of the concept
+
+**sessionInformationUserId**
+
+Session Information Id of the user
+
+#### Example
+
+------
+
+`var typeConcept = MakeTheInstanceConcept("The-big-cat", "", true, 999, 4, 999);
+  var referentConcept = MakeTheInstanceConcept("referent", the-lion, false, 999, 4, 999);`
+
+`CreateTheConnection(typeConcept.id, typeConcept.userId, referentConcept.id, referentConcept.userId, typeConcept.id, 999, 999);`
+
+Above example creates the connection from typeConcept to referentConcept.
+
+
+
+# GetCompositionWithId
+
+------
+
+(mftsccs>=3.0.6)
+
+GetCompositionWithId--returns final result of the composition with unique Id
+
+#### Description
+
+`GetCompositionWithId(id: number)`
+
+GetCompositionWithId():- returns final result of the composition with unique Id
+
+#### Parameters
+
+**id**
+
+id of concept's type(eg:-typeconcept)
+
+#### Example
+
+GetCompositionWithId(typeConcept.id)
+
+Above example returns id of the composition by taking typeconcept's id as an paramatre
