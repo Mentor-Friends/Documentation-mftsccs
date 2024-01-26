@@ -370,3 +370,41 @@ id of concept's type(eg:-typeconcept)
 GetCompositionWithId(typeConcept.id)
 
 Above example returns id of the composition by taking typeconcept's id as an paramatre
+
+# GetCompositionList
+
+------
+
+(mftsccs>=3.0.6)
+
+GetCompositionList:-returns composition list from server
+
+#### Description
+
+`GetCompositionList(compositionName:string,userId:number,inpage:number=10,page:number=1)`
+
+GetCompositionList():- This is a function that returns composition list from server.
+
+#### Parameters
+
+**compositionName**
+
+Name of the composition.
+
+**userId**
+
+Id of a user.
+
+**inpage**
+
+Number of compositions in a page.
+
+**page** 
+
+Number of Page
+
+#### Example
+
+`GetCompositionList("E-product", 999, 100, 1);`
+
+Above example lists hundred compositions in a page of E-product,
